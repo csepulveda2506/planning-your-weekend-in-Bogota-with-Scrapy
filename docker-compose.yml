@@ -1,0 +1,15 @@
+version: '3'
+services:
+  web:
+    build: .
+    command: python manage.py runserver
+    depends_on:
+      - postgres
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "8000:8000"
+  postgres:
+    build: ./docker/postgres
+    ports:
+      - "5473:5473"
