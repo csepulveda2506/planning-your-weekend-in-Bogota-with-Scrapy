@@ -5,9 +5,7 @@
       "start-date":"21-05-2018",
       "end-date":"27-12-2018",
       "description":"¿Sabes qué es filatelia? La filatelia es el arte de coleccionar estampillas o sellos postales. A través de la filatelia podemos conocer e investigar acerca de todo tipo de temas: arte, ciencia, música, cultura, política, entre otros, dado que el quehacer filatélico da cuenta del acontecer histórico y social de un territorio. El Banco de la República invita a toda la ciudadanía a visitar la exposición Cronología de la Filatelia en Colombia. Una intervención que aborda la historia del uso de la estampilla en Colombia desde 1859, fecha en la que fue emitida la primera serie de estampillas en nuestro país. Esta es una gran oportunidad para acercase a la historia de Colombia de una forma dinámica, diferente y muy entretenida.",
-      "tags":[  
-         "cultura"
-      ],
+      "price": 5000,
       "link":"http://www.banrepcultural.org/medellin/actividad/exposicion-cronologia-de-la-filatelia-en-colombia"
    },
    {  
@@ -16,11 +14,7 @@
       "start-date":"21-12-2018",
       "end-date":"21-12-2018",
       "description":"El Planetario de Bogotá presenta este nuevo show láser, con algunas de las más icónicas canciones de la banda, donde los asistentes traerán a su memoria melodías inmortales acompañadas de luces que rítmicamente los llevarán a través de un viaje resonante.",
-      "tags":[  
-         "cultura",
-         "musica",
-         "domo"
-      ],
+      "price": 3000,
       "link":"http://www.planetariodebogota.gov.co/evento/proyecci%C3%B3n-l%C3%A1ser-queen-42"
    },
    {  
@@ -29,10 +23,7 @@
       "start-date":"01-12-2018",
       "end-date":"01-12-2018",
       "description":"Panel de presentación de libro “La incertidumbre de la vida en el Cosmos” por parte de los autores y miembros de la Comisión de Estudio en Exobiologia de ACDA y fruto de más de 30 años de estudio sobre el tema.",
-      "tags":[  
-         "cultura",
-         "conferencia"
-      ],
+      "price": 0,
       "link":"http://www.planetariodebogota.gov.co/conferencias#contenido"
    },
    {  
@@ -41,10 +32,7 @@
       "start-date":"23-03-2019",
       "end-date":"23-03-2019",
       "description":"RAISE VIBRATION",
-      "tags":[  
-         "cultura",
-         "musica"
-      ],
+      "price": 10000,
       "link":"https://www.movistararena.co/events/lenny-kravitz/"
    }
 ]

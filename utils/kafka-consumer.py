@@ -29,26 +29,26 @@ def consume_topic(args):
                     day, month, year = msg_value['start-date'] \
                         .split('-')
                     start_date = datetime.date(int(year), int(month),
-                                                int(day))
+                                               int(day))
                     cur.execute("""
                         INSERT INTO sites (location, title, 
                         startDate, 
-                        description, tags, link) 
+                        description, price, link) 
                         VALUES (%s, %s, %s, %s, %s, %s)
                         ON CONFLICT (link)
                         DO UPDATE SET (location, title, 
                         startDate, 
-                        description, tags) = 
+                        description, price) = 
                         (EXCLUDED.location, EXCLUDED.title, 
                         EXCLUDED.startDate, EXCLUDED.description,
-                        EXCLUDED.tags); 
+                        EXCLUDED.price); 
                         """, (msg_value['location'],
                               msg_value['title'],
                               start_date,
                               msg_value['description'],
                               msg_value['price'],
                               msg_value['link']))
-                    cur.commit()
+                db.commit()
                 consumer.commit()
     except KeyboardInterrupt:
         consumer.close()

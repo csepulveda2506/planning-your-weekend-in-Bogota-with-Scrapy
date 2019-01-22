@@ -16,7 +16,6 @@ for item in data:
                                value=item)
         record_metadata = future.get(timeout=10)
     except KafkaError:
-        # Decide what to do if produce request failed...
         print(log.exception())
         pass
     except KeyboardInterrupt:

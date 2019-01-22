@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Index</h1>
+<table>
+    <tr>
+        <th>
+            Title
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Date
+        </th>
+        <th>
+            Price
+        </th>
+        <th>
+            URL
+        </th>
+    </tr>
+    {% for site in sites %}
+        <tr>
+            <td>
+                {{ site.title }}
+            </td>
+            <td>
+                {{ site.description }}
+            </td>
+            <td>
+                {{ site.startdate }}
+            </td>
+            <td>
+                {{ site.price }}
+            </td>
+            <td>
+                {{ site.link }}
+            </td>
+        </tr>
+    {% endfor %}
+
+</table>
+</body>
+</html>

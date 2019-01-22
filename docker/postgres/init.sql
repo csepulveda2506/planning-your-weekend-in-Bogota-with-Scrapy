@@ -4,5 +4,5 @@ CREATE TABLE sites (
   startDate TIMESTAMP NOT NULL,
   endDate TIMESTAMP,
   description  VARCHAR(1500) NOT NULL,
-  tags VARCHAR(500) ,
+  price NUMERIC,
   link VARCHAR(500) PRIMARY KEY);
