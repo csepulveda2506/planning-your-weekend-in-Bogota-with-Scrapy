@@ -24,7 +24,7 @@ class SitesView(TemplateView):
         context = super().get_context_data(**kwargs)
         query_set = Sites.objects.all()
         sites = [Site(location=site.location, title=site.title,
-                      start_date=site.startdate,
+                      start_date=site.startdate.strftime("%b %d %Y"),
                       description=site.description, price=site.price,
                       link=site.link) for site in query_set]
         context['sites'] = sites

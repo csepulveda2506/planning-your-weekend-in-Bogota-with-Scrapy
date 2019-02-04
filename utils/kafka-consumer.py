@@ -28,8 +28,7 @@ def consume_topic(args):
                     msg_value = json.loads(message.value.decode('ascii'))
                     day, month, year = msg_value['start-date'] \
                         .split('-')
-                    start_date = datetime.date(int(year), int(month),
-                                               int(day))
+                    start_date = datetime.date(int(year), int(month), int(day))
                     cur.execute("""
                         INSERT INTO sites (location, title, 
                         startDate, 
