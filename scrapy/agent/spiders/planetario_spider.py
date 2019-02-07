@@ -1,7 +1,15 @@
 import datetime
 import re
+from json import dumps
+
+from kafka import KafkaProducer
 
 import scrapy
+
+KAFKA_TOPIC = 'pycon-test-topic'
+KAFKA_BROKERS = 'localhost:9092'
+producer = KafkaProducer(bootstrap_servers=[KAFKA_BROKERS],
+                         value_serializer=lambda x: dumps(x).encode('utf-8'))
 
 MONTH, YEAR = datetime.datetime.now().month, datetime.datetime.now().year
 
@@ -41,6 +49,7 @@ class PlanetarioSpider(scrapy.Spider):
             'price': price,
             'link': response.meta['link']
         }
+        producer.send(topic=KAFKA_TOPIC, value=message)
         return message
 
 
