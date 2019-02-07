@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for scrapy project
+# Scrapy settings for spiders project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,14 +9,14 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'scrapy'
+BOT_NAME = 'agent'
 
-SPIDER_MODULES = ['scrapy.scrapy']
-NEWSPIDER_MODULE = 'scrapy.scrapy'
+SPIDER_MODULES = ['agent.spiders']
+NEWSPIDER_MODULE = 'agent.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'scrapy (+http://www.yourdomain.com)'
+#USER_AGENT = 'spiders (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -47,13 +47,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'scrapy.middlewares.SpidersSpiderMiddleware': 543,
+#    'spiders.middlewares.SpidersSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'scrapy.middlewares.SpidersDownloaderMiddleware': 543,
+#    'spiders.middlewares.SpidersDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -65,7 +65,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'scrapy.pipelines.SpidersPipeline': 300,
+#    'spiders.pipelines.SpidersPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
