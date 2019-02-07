@@ -54,7 +54,9 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            '/Users/camilo/projects/python/pycon2019/planning-your-weekend-in-Bogota-with-Scrapy/mysite/planner/templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -74,8 +76,12 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'pycon2019',
+        'USER': 'pycon',
+        'PASSWORD': 'pycon2019',
+        'HOST': "localhost",
+        'PORT': "5432",
     }
 }
 

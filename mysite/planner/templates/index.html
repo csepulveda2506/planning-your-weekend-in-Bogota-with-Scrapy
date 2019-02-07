@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css' %}">
+</head>
+
+<body>
+
+<h1>Eventos</h1>
+
+<div class="slidecontainer">
+    <input type="range" min="0" max="20000" value="10000" class="slider" id="myRange">
+    <p><b>Precio:</b> <span id="demo"></span></p>
+</div>
+
+<div style="overflow-x:auto;">
+    <table id="myTable">
+        <col width="200">
+        <col width="500">
+        <tr class="header">
+            <th>
+                Nombre
+            </th>
+            <th>
+                Descripción
+            </th>
+            <th>
+                Fecha
+            </th>
+            <th>
+                Precio
+            </th>
+            <th>
+                URL
+            </th>
+
+        </tr>
+        {% for site in sites %}
+        <tr>
+            <td>
+                <b>{{ site.title }}</b>
+            </td>
+            <td>
+                <p align="justify">{{ site.description }}</p>
+            </td>
+            <td>
+                {{ site.start_date }}
+            </td>
+            <td>
+                {{ site.price }}
+            </td>
+            <td>
+                {{ site.link }}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% load static %}
+<script type="text/javascript" src="{% static 'js/slicer.js' %}"></script>
+
+</body>
+</html>
