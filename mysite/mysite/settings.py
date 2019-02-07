@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'planner.apps.PlannerConfig',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +56,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            '/Users/camilo/projects/python/pycon2019/planning-your-weekend-in-Bogota-with-Scrapy/mysite/planner/templates',
+            '../planner/templates',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
