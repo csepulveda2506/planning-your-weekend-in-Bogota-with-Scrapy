@@ -6,10 +6,12 @@ from json import dumps
 
 KAFKA_TOPIC = 'pycon-test-topic'
 KAFKA_BROKERS = 'localhost:9092'
-MONTH, YEAR = datetime.datetime.now().month, datetime.datetime.now().year
-
 producer = KafkaProducer(bootstrap_servers=[KAFKA_BROKERS],
                          value_serializer=lambda x: dumps(x).encode('utf-8'))
+
+
+MONTH, YEAR = datetime.datetime.now().month, datetime.datetime.now().year
+
 
 
 class PlanetarioSpider(scrapy.Spider):
