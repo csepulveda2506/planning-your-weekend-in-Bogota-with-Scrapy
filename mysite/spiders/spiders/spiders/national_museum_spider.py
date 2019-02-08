@@ -10,7 +10,7 @@ producer = KafkaProducer(bootstrap_servers=[KAFKA_BROKERS],
                          value_serializer=lambda x: dumps(x).encode('utf-8'))
 
 
-class NationalMuseumSpider(scrapy.Spider):
+class national_museum_spider(scrapy.Spider):
     name="museo_nacional"
     start_urls = ["http://www.museonacional.gov.co/el-museo/Paginas/default.aspx"]
     filename = 'museos-nacional.html'
