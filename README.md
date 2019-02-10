@@ -1,2 +1,2 @@
 # planning-your-weekend-in-Bogota-with-Scrapy
-Jupyter notebook documentation for the project "Creating on demand web crawlers with django and kafka"
+Sample architecture to scrap data using Scrapy framework and displaying it through a Django web application using Apache Kafka as messaging queue.
